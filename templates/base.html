@@ -1,0 +1,21 @@
+<!doctype html><html>
+<head>
+	<title>DemoDog</title>
+</head>
+<body>
+{% if user.is_authenticated %}
+	<p>
+		{% if user.is_staff %}
+		<a href="/admin">Masters</a> &nbsp; | &nbsp;
+		{% endif %}
+		<a href="/accounts/logout">Logout</a> &nbsp; | &nbsp;
+	<!--	<a href=""></a> &nbsp; | &nbsp; -->
+	</p>
+	<p>
+	You are logged in as {{ user.username }}
+	</p>
+{% endif %}
+
+{% block content %}{% endblock %}
+</body>
+</html>

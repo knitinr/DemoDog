@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<ul>
+{% for iterobj in a %}
+<li>{{ iterobj.title }}</li>
+{% endfor %}
+</ul>
+<p>{{ a.count }} records</p>
+{% endblock %}
